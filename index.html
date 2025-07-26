@@ -1,7 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* General Body and Container Styles */
+body {
+    font-family: 'YourChosenFont', sans-serif; /* Use the font linked in HTML */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1a1a1a; /* Dark background similar to the image */
+    color: #f0f0f0; /* Light text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #222; /* Slightly lighter dark background for header */
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFD700; /* Gold color for the logo, similar to the image */
+}
+
+.logo .code-brackets {
+    color: #FFD700; /* Gold color for the brackets */
+    margin-right: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Hero Section Styles */
+#hero {
+    min-height: 80vh; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    text-align: center; /* Adjust based on desired alignment */
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden; /* To contain any absolute positioned elements like the large code icon */
+}
+
+#hero .container {
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    gap: 40px;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-content p:first-child {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 72px;
+    color: #FFD700; /* Gold color for "PixelDraft" */
+    margin: 10px 0;
+    text-transform: uppercase; /* If desired */
+    letter-spacing: 2px;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.hero-content p:last-of-type { /* The descriptive paragraph */
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #FFD700; /* Gold button */
+    color: #1a1a1a;
+    border: 2px solid #FFD700;
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    color: #FFD700;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+}
+
+.secondary-btn:hover {
+    background-color: #FFD700;
+    color: #1a1a1a;
+}
+
+.hero-image {
+    /* You would style this to position the large code icon */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Place it behind the text */
+    opacity: 0.1; /* Make it subtle */
+}
+
+.hero-image img {
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+}
+
+
+/* Section Placeholder Styles (for About, Skills, Projects) */
+.section-placeholder {
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.section-placeholder h2 {
+    font-size: 48px;
+    color: #FFD700;
+    margin-bottom: 40px;
+}
+
+.section-placeholder p, .section-placeholder ul {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-placeholder ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.section-placeholder ul li {
+    background-color: #2a2a2a;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+.project-card h3 {
+    color: #FFD700;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #e6c200;
+}
+
+
+/* Contact Section Styles */
+#contact {
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+#contact h2 {
+    font-size: 48px;
+    color: #FFD700;
+    margin-bottom: 40px;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.contact-info strong {
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 10px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelDraft - Freelance Web Developer</title>
