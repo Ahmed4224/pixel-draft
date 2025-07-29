@@ -70,7 +70,7 @@ nav ul li a::after {
     bottom: 0;
     height: 2px;
     width: 0;
-    background-color: #FFD700; /* Gold underline */
+    background-color: #FFD700;
     transition: width 0.3s ease;
 }
 
@@ -82,23 +82,21 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-
-/* Hero Section Styles */
 #hero {
-    min-height: 80vh; /* Adjust as needed */
+    min-height: 80vh;
     display: flex;
     align-items: center;
-    text-align: center; /* Adjust based on desired alignment */
+    text-align: center;
     padding: 80px 0;
     position: relative;
-    overflow: hidden; /* To contain any absolute positioned elements like the large code icon */
+    overflow: hidden;
 }
 
 #hero .container {
     display: flex;
-    justify-content: center; /* Center content */
+    justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack elements vertically on smaller screens */
+    flex-direction: column;
     gap: 40px;
 }
 
@@ -115,9 +113,9 @@ nav ul li a:hover::after {
 
 .hero-content h1 {
     font-size: 72px;
-    color: #FFD700; /* Gold color for "PixelDraft" */
+    color: #FFD700;
     margin: 10px 0;
-    text-transform: uppercase; /* If desired */
+    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
@@ -127,7 +125,7 @@ nav ul li a:hover::after {
     margin-bottom: 20px;
 }
 
-.hero-content p:last-of-type { /* The descriptive paragraph */
+.hero-content p:last-of-type {
     font-size: 20px;
     line-height: 1.6;
     color: #ccc;
@@ -151,7 +149,7 @@ nav ul li a:hover::after {
 }
 
 .primary-btn {
-    background-color: #FFD700; /* Gold button */
+    background-color: #FFD700;
     color: #1a1a1a;
     border: 2px solid #FFD700;
 }
@@ -173,22 +171,19 @@ nav ul li a:hover::after {
 }
 
 .hero-image {
-    /* You would style this to position the large code icon */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1; /* Place it behind the text */
-    opacity: 0.1; /* Make it subtle */
+    z-index: -1;
+    opacity: 0.1;
 }
 
 .hero-image img {
-    width: 400px; /* Adjust size as needed */
+    width: 400px;
     height: auto;
 }
 
-
-/* Section Placeholder Styles (for About, Skills, Projects) */
 .section-placeholder {
     padding: 80px 0;
     text-align: center;
@@ -262,8 +257,6 @@ nav ul li a:hover::after {
     background-color: #e6c200;
 }
 
-
-/* Contact Section Styles */
 #contact {
     padding: 80px 0;
     text-align: center;
@@ -293,7 +286,6 @@ nav ul li a:hover::after {
     margin-right: 10px;
 }
 
-/* Footer Styles */
 footer {
     background-color: #222;
     color: #ccc;
@@ -307,7 +299,6 @@ footer p {
     font-size: 16px;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
